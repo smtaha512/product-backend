@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+
+# environments
+.env*
+# include environment example file
+!.env.example
+
+dist/
