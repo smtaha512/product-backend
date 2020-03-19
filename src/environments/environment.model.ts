@@ -1,6 +1,6 @@
-import { ConnectionOptions } from "typeorm";
+import { ConnectionOptions } from 'typeorm';
 
 export interface Environment {
-  database: Partial<ConnectionOptions>;
+  database: ConnectionOptions;
   port: number | string;
 }
