@@ -1,9 +1,11 @@
-import { app } from "./app";
+import { app } from './app';
 
-const PORT = app.get("port");
+const server = app.then(appInstance => {
+  const PORT = appInstance.get('port');
 
-const server = app.listen(PORT, function() {
-  console.log(`Server up at ${PORT}`);
+  return appInstance.listen(PORT, function() {
+    console.log(`Server up at ${PORT}`);
+  });
 });
 
 export default server;
